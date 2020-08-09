@@ -12,10 +12,10 @@ const normalPerson={
                 return this.salary;
             }
 }
-// console.log(normalPerson.lastName);
+console.log(normalPerson.lastName);
 
-    // normalPerson.chargeBil(800);
-    // console.log(normalPerson.salary);
+    normalPerson.chargeBil(800);
+    console.log(normalPerson.salary);
 
     const heroPerson={
         firstName:"Hero",
@@ -27,27 +27,27 @@ const normalPerson={
         lastName:'Golam',
         salary:25000
     }
-    // normalPerson.chargeBil();
+    normalPerson.chargeBil();
 
-//  const heroChargeBill=normalPerson.chargeBil.bind(heroPerson);
-//  heroChargeBill(2000);
-//  heroChargeBill(3000);
-//  console.log(heroPerson.salary);
-// console.log(normalPerson.salary);
+ const heroChargeBill=normalPerson.chargeBil.bind(heroPerson);
+ heroChargeBill(2000);
+ heroChargeBill(3000);
+ console.log(heroPerson.salary);
+console.log(normalPerson.salary);
 
-// const friendlyChargeBill=normalPerson.chargeBil.bind(friendlyPerson);
-// friendlyChargeBill(1500);
+const friendlyChargeBill=normalPerson.chargeBil.bind(friendlyPerson);
+friendlyChargeBill(1500);
 
 // difference between bind, call and apply
 
-//  normalPerson.chargeBil.call(heroPerson,900,100,50);
-//  normalPerson.chargeBil.call(heroPerson,100,2000,60);
-//  console.log(heroPerson.salary);
+ normalPerson.chargeBil.call(heroPerson,900,100,50);
+ normalPerson.chargeBil.call(heroPerson,100,2000,60);
+ console.log(heroPerson.salary);
 
 
-//  normalPerson.chargeBil.call(friendlyPerson,10000,100,80);
-//  console.log(friendlyPerson.salary);
-//  console.log(normalPerson.salary);
+ normalPerson.chargeBil.call(friendlyPerson,10000,100,80);
+ console.log(friendlyPerson.salary);
+ console.log(normalPerson.salary);
 
 normalPerson.chargeBil.apply(heroPerson,[3000,300,30]);
 normalPerson.chargeBil.apply(heroPerson,[4000,500,80]);
